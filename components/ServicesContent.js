@@ -26,7 +26,7 @@ const LogoComponent = () => {
 
         {/* Accounting Services Section */}
         <div className="text-left">
-          <h3 className="text-2xl text-center font-semibold mb-4">Sectors We Serve</h3>
+          <h3 className="text-3xl text-center font-bold mb-10">Sectors We Serve</h3>
           <p className="mb-4">
             At Wise Numbers LTD, we cater to a diverse clientele across various industries, each with its unique requirements. We meticulously identify all allowable tax expenses specific to each sector, ensuring full compliance with tax regulations while focusing on minimizing tax liabilities for every client we serve, so you can keep most of your earnings!
           </p>

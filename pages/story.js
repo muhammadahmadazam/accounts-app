@@ -8,9 +8,9 @@ const Story = () => {
         <div>
       <Navbar />
       
-        <div className="relative bg-cover bg-center h-screen" style={{ backgroundImage: 'url("/back.jpg")' }}>
-            <div className="absolute inset-0 bg-gray-900 opacity-40"></div>
-            <div className="relative h-full flex flex-col justify-center items-center">
+        <div className="relative bg-cover bg-center h-screen mt-20" style={{ backgroundImage: 'url("/back.jpg")' }}>
+            {/* <div className="absolute inset-0 bg-gray-900 opacity-40"></div> */}
+            {/* <div className="relative h-full flex flex-col justify-center items-center">
                 <div className="max-w-3xl mx-auto px-6 text-center">
                     <h1 className="text-white text-4xl md:text-6xl font-bold animate-bounce">
                         Our Story
@@ -20,7 +20,7 @@ const Story = () => {
                     </p>
                     
                 </div>
-            </div>
+            </div> */}
 <About/>
 <Testimonial/>
 <Footer/>
