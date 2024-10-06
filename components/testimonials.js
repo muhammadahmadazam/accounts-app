@@ -47,7 +47,7 @@ const Testimonial = () => {
         <div className="relative flex items-center justify-center">
           <button
             onClick={handlePrev}
-            className="absolute left-0 ml-4 bg-transparent text-gray-600 py-2 px-4 hover:text-gray-900 transition duration-300"
+            className="absolute left-0 sm:bottom-auto bottom-0 ml-4 bg-transparent text-gray-600 py-2 px-4 hover:text-gray-900 transition duration-300"
           >
             <FontAwesomeIcon icon={faChevronLeft} size="2x" />
           </button>
@@ -60,7 +60,7 @@ const Testimonial = () => {
                   className="w-20 h-20 rounded-full object-cover"
                 />
               </div>
-              <p className="text-xl italic text-gray-800 mb-4">
+              <p className="sm:text-xl text-lg italic text-gray-800 mb-4">
                 {testimonials[currentIndex].quote}
               </p>
               <p className="text-gray-900 font-semibold">
@@ -73,7 +73,7 @@ const Testimonial = () => {
           </div>
           <button
             onClick={handleNext}
-            className="absolute right-0 mr-4 bg-transparent text-gray-600 py-2 px-4 hover:text-gray-900 transition duration-300"
+            className="absolute right-0 mr-4 sm:bottom-auto bottom-0 bg-transparent text-gray-600 py-2 px-4 hover:text-gray-900 transition duration-300"
           >
             <FontAwesomeIcon icon={faChevronRight} size="2x" />
           </button>
