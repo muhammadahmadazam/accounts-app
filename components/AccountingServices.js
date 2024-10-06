@@ -1,5 +1,7 @@
-import React from 'react';
-import ContentBox from './ContentBox'; // Adjust the import path as necessary
+"use client"
+
+import React from 'react'
+import { motion } from 'framer-motion'
 
 const accountingServices = [
   {
@@ -24,7 +26,7 @@ const accountingServices = [
   },
   {
     title: "Partnership Tax Services - Expert Tax Solutions for Partnerships!",
-    text: "Manage your partnership’s tax obligations efficiently. We offer tailored advice to optimize tax outcomes and ensure compliance. Wise Numbers LTD helps your partnership thrive."
+    text: "Manage your partnership's tax obligations efficiently. We offer tailored advice to optimize tax outcomes and ensure compliance. Wise Numbers LTD helps your partnership thrive."
   },
   {
     title: "Payroll & Employment Tax Management - Effortless Payroll and Tax Processing!",
@@ -38,27 +40,46 @@ const accountingServices = [
     title: "Company Secretarial – Executive support to your business!",
     text: "Limited companies require secretarial services to comply with the Companies Act Regulations. At Wise Numbers LTD, we provide a wide range of secretarial services such as company formation, annual confirmation statements, advising on corporate governance, managing shareholder records, maintaining board minutes and resolutions, assisting with structural changes like director appointments, company dissolution or liquidation."
   }
-];
+]
 
-const AccountingServices = () => {
+export default function AccountingServices() {
   return (
-    <div className="min-h-screen flex flex-col bg-white pb-24">
-      <div className="flex-1 flex flex-col bg-white p-8">
-        <div className="mb-8">
-          <h1 className="text-3xl text-center font-bold mb-10">Accounting Services</h1>
-
-          <div className='flex flex-col justify-center items-center'>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {accountingServices.map((service, index) => (
-              <ContentBox key={index} title={service.title} text = {service.text}>
-              </ContentBox>
-            ))}
-          </div>
-          </div>
+    <div className="bg-white py-16 px-4">
+      <div className="max-w-7xl mx-auto">
+        <motion.h2 
+          className="text-3xl font-bold text-[#242A33] mb-8 text-center"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          Our Accounting Services
+        </motion.h2>
+        <motion.p 
+          className="text-lg text-[#242A33] mb-12 text-center max-w-3xl mx-auto"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
+          At Wise Numbers LTD, we offer a comprehensive range of accounting services designed to meet the diverse needs of businesses and individuals. Our expert team ensures accuracy, compliance, and strategic financial management to help you succeed.
+        </motion.p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {accountingServices.map((service, index) => (
+            <motion.div
+              key={index}
+              className="bg-[#E5E7EB] rounded-lg shadow-lg overflow-hidden"
+              whileHover={{ scale: 1.03, transition: { duration: 0.2 } }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.05 }}
+            >
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-[#242A33] mb-3">{service.title}</h3>
+                <p className="text-[#242A33] text-sm">{service.text}</p>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </div>
-  );
-};
-
-export default AccountingServices;
+  )
+}
