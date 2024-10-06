@@ -1,27 +1,31 @@
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTwitter, faInstagram, faGithub } from '@fortawesome/free-brands-svg-icons';
+import {
+  faTwitter,
+  faInstagram,
+  faGithub,
+} from '@fortawesome/free-brands-svg-icons';
 
 const footerLinks = [
   { name: 'Business Services', href: '/test' },
   { name: 'Tax Services', href: '/tax' },
   { name: 'Accounting Services', href: '/Train' },
-  { name: 'Contact Us', href: '/contact' }
+  { name: 'Contact Us', href: '/contact' },
 ];
 
 export default function Footer() {
   return (
-    <footer className="bg-[#3b445f] shadow-sm">
-      <div className="max-w-7xl mx-auto px-8 lg:px-12 py-8">
-        <div className="flex flex-col items-center justify-center space-y-4">
-          <div className="flex space-x-6">
+    <footer className="bg-[#3b445f] shadow-sm ">
+      <div className="px-8 lg:px-12 py-8 mx-auto max-w-wrapper">
+        <div className="flex flex-col items-center justify-center  space-y-4">
+          <div className="flex flex-col sm:flex-row items-center space-y-6 sm:space-y-0 space-x-6">
             {footerLinks.map((link) => (
               <Link key={link.name} href={link.href} passHref>
                 <a className="text-white hover:underline">{link.name}</a>
               </Link>
             ))}
           </div>
-          <div className="flex space-x-6">
+          <div className="flex space-x-6 mt-3 sm:mt-0">
             <Link href="https://twitter.com" passHref>
               <a className="text-white">
                 <FontAwesomeIcon icon={faTwitter} size="lg" />
@@ -39,7 +43,9 @@ export default function Footer() {
             </Link>
           </div>
           <div className="border-t-4 border-zinc-200 pt-8 text-center">
-            <p className="text-white">&copy; 2024 UK Accountants. All rights reserved.</p>
+            <p className="text-white">
+              &copy; 2024 UK Accountants. All rights reserved.
+            </p>
           </div>
         </div>
       </div>
