@@ -27,10 +27,27 @@ const Contact = () => {
           </div>
         </div> */}
         <Talk />
+        <div className="bg-white">
+          <div className="flex justify-between gap-6 items-center max-w-wrapper mx-auto">
+            <div>
+              <img src="/icaew-l.png" alt="acca" className="w-[150px] h-auto" />
+            </div>
+            <div>
+              <img
+                src="/pcd-logo.jpg"
+                alt="acca"
+                className="w-[150px] h-auto"
+              />
+            </div>
+            <div>
+              <img src="/acca.png" alt="acca" className="w-[100px] h-auto" />
+            </div>
+          </div>
+        </div>
+
         <GetIn />
         <Logo />
         <Services />
-
         <Footer />
       </div>
     </div>

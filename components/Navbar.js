@@ -14,7 +14,10 @@ const navigation = [
 
 export default function Navbar() {
   return (
-    <Disclosure as="nav" className="fixed top-0 w-full bg-[#3b445f] shadow-sm z-50 h-18">
+    <Disclosure
+      as="nav"
+      className="fixed top-0 w-full bg-[#3b445f] shadow-sm z-50 h-18"
+    >
       {({ open }) => (
         <>
           <div className="mx-auto">
@@ -24,9 +27,10 @@ export default function Navbar() {
                 <Link href="/">
                   <a>
                     <img
-                      src="/logo.png"
+                      src="/newLogo.png"
                       alt="Logo"
-                      className="h-[280px] w-[280px] xl:h-[280px] xl:w-[360px]"
+                      className="w-[100px] h-auto"
+                      // className="h-[280px] w-[280px] xl:h-[280px] xl:w-[360px]"
                     />
                   </a>
                 </Link>
@@ -50,8 +54,10 @@ export default function Navbar() {
                   {navigation.map(({ name, href, subItems }) => (
                     <div className="relative group" key={name}>
                       <Link href={href}>
-                        <a className={`inline-flex items-center py-2 font-medium rounded-md text-white hover:text-[#475374] duration-100
-                          ${'text-sm' && 'xl:text-base' && '2xl:text-lg'}`}>
+                        <a
+                          className={`inline-flex items-center py-2 font-medium rounded-md text-white hover:text-[#475374] duration-100
+                          ${'text-sm' && 'xl:text-base' && '2xl:text-lg'}`}
+                        >
                           {name}
                         </a>
                       </Link>
@@ -60,7 +66,9 @@ export default function Navbar() {
                           <div className="py-0">
                             {subItems.map((item) => (
                               <Link href={href} key={item}>
-                                <a className="block px-8 py-4 text-sm text-gray-700 hover:bg-gray-100">{item}</a>
+                                <a className="block px-8 py-4 text-sm text-gray-700 hover:bg-gray-100">
+                                  {item}
+                                </a>
                               </Link>
                             ))}
                           </div>
@@ -105,7 +113,9 @@ export default function Navbar() {
                     <div className="pl-8 mt-2">
                       {subItems.map((item) => (
                         <Link href={href} key={item}>
-                          <a className="block px-4 py-2 text-sm text-white hover:bg-sky-600">{item}</a>
+                          <a className="block px-4 py-2 text-sm text-white hover:bg-sky-600">
+                            {item}
+                          </a>
                         </Link>
                       ))}
                     </div>
