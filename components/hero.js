@@ -3,7 +3,7 @@ import React from 'react';
 
 const ContentPictureComponent = () => {
   return (
-    <div className="flex flex-col lg:flex-row lg:gap-8 items-center lg:items-center p-4 lg:h-screen px-[1.5rem] mx-auto max-w-[1450px]">
+    <div className="flex flex-col lg:flex-row lg:gap-8 items-center lg:items-center p-4 lg:p-0 lg:h-screen px-[1.5rem] mx-auto max-w-[1450px]">
       {/* Content Section */}
       <div className="lg:w-1/2 p-4 mt-24 flex flex-col justify-center text-center lg:mt-0 lg:p-0">
         <h1 className="font-montserrat mb-4 font-bold text-gray-700 text-2xl mt-4 sm:text-4xl lg:mt-16 ">
@@ -22,7 +22,7 @@ const ContentPictureComponent = () => {
       </div>
 
       {/* Picture Section */}
-      <div className="lg:w-1/2 p-4 mt-8 sm:mt-16 lg:mt-16 lg:p-0 flex justify-center">
+      <div className="lg:w-1/2 p-4 mt-8 sm:mt-16 lg:mt-0 lg:p-0 flex justify-center">
         <img
           src="/heroSection.png"
           alt="Hero section Image"

@@ -5,19 +5,24 @@ const cards = [
   {
     logo: '/image1.jpg', // Replace with your logo image path
     name: 'Business Services',
-    description: ' Expertly navigate complex tax regulations to optimize your business tax strategy, ensuring compliance while uncovering savings opportunities.',
+    description:
+      ' Expertly navigate complex tax regulations to optimize your business tax strategy, ensuring compliance while uncovering savings opportunities.',
   },
   {
     logo: '/image.jpg', // Replace with your logo image path
     name: 'Tax Services',
-    description: ' Comprehensive tax solutions designed to simplify compliance, maximize deductions, and minimize liabilities for businesses and individuals alike',
+    description:
+      ' Comprehensive tax solutions designed to simplify compliance, maximize deductions, and minimize liabilities for businesses and individuals alike',
   },
 ];
 
 const ServiceComponent = () => {
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
-  const [modalContent, setModalContent] = useState({ name: '', description: '' });
+  const [modalContent, setModalContent] = useState({
+    name: '',
+    description: '',
+  });
 
   const handleClick = () => {
     router.push('/test');
@@ -34,15 +39,25 @@ const ServiceComponent = () => {
   };
 
   return (
-    <div className="relative bg-cover bg-center" style={{ backgroundImage: "url('/service.jpeg')" }}>
+    <div
+      className="relative bg-cover bg-center"
+      style={{ backgroundImage: "url('/service.jpeg')" }}
+    >
       <div className="min-h-screen flex flex-col items-center justify-center bg-gray-900 bg-opacity-50 p-4 md:p-8">
         {/* Content Section */}
         <div className="text-center mb-8 md:mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">What We Can Do For You</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            What We Can Do For You
+          </h2>
           <p className="text-gray-300 mb-6">
-            Explore our services designed to help you achieve your goals. Our solutions are tailored to meet your needs and exceed your expectations.
+            Explore our services designed to help you achieve your goals. Our
+            solutions are tailored to meet your needs and exceed your
+            expectations.
           </p>
-          <button className="bg-[#3b445f] text-white py-2 px-4 md:py-2 md:px-6 rounded-lg hover:bg-blue-600 transition duration-300" onClick={handleClick}>
+          <button
+            className="bg-[#3b445f] text-white py-2 px-4 md:py-2 md:px-6 rounded-lg hover:bg-blue-600 transition duration-300"
+            onClick={handleClick}
+          >
             All Services
           </button>
         </div>
@@ -50,11 +65,20 @@ const ServiceComponent = () => {
         {/* Cards Section */}
         <div className="flex flex-col md:flex-row gap-6 md:gap-8 justify-center">
           {cards.map((card, index) => (
-            <div key={index} className="bg-white p-4 md:p-6 rounded-lg shadow-lg w-full md:w-80 text-center">
+            <div
+              key={index}
+              className="bg-white p-4 md:p-6 rounded-lg shadow-lg w-full md:w-80 text-center"
+            >
               <div className="flex justify-center mb-4">
-                <img src={card.logo} alt={card.name} className="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover" />
+                <img
+                  src={card.logo}
+                  alt={card.name}
+                  className="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover"
+                />
               </div>
-              <h3 className="text-lg md:text-xl font-semibold mb-2">{card.name}</h3>
+              <h3 className="text-lg md:text-xl font-semibold mb-2">
+                {card.name}
+              </h3>
               <p className="text-gray-700 mb-4">{card.description}</p>
               <button
                 className="bg-[#3b445f] text-white py-2 px-4 rounded-lg hover:bg-[#3b445f] transition duration-300"
@@ -77,7 +101,9 @@ const ServiceComponent = () => {
             >
               &times;
             </button>
-            <h2 className="text-xl md:text-2xl font-bold mb-4">{modalContent.name}</h2>
+            <h2 className="text-xl md:text-2xl font-bold mb-4">
+              {modalContent.name}
+            </h2>
             <p className="text-gray-700">{modalContent.description}</p>
           </div>
         </div>

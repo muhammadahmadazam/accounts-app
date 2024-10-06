@@ -1,41 +1,46 @@
 import React, { useState } from 'react';
 
 export default function Contact() {
-  const [result, setResult] = useState("");
+  const [result, setResult] = useState('');
 
   const onSubmit = async (event) => {
     event.preventDefault();
-    setResult("Sending....");
+    setResult('Sending....');
     const formData = new FormData(event.target);
 
-    formData.append("access_key", "7eac81d4-e417-4f94-a376-b44eddee3e39");
+    formData.append('access_key', '7eac81d4-e417-4f94-a376-b44eddee3e39');
 
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData
+    const response = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: formData,
     });
 
     const data = await response.json();
 
     if (data.success) {
-      setResult("Form Submitted Successfully");
+      setResult('Form Submitted Successfully');
       event.target.reset();
     } else {
-      console.log("Error", data);
+      console.log('Error', data);
       setResult(data.message);
     }
   };
 
   return (
-    <div className="min-h-screen bg-cover bg-center relative" style={{ backgroundImage: 'url("/image3.jpg")' }}>
+    <div
+      className="min-h-screen bg-cover bg-center relative"
+      style={{ backgroundImage: 'url("/contactUsBg.png")' }}
+    >
       <div className="absolute inset-0 bg-gray-900 opacity-40"></div>
-      <div className="relative z-10 flex flex-col md:flex-row min-h-screen">
-        
+      <div className="relative z-10 flex flex-col justify-center md:flex-row min-h-screen max-w-wrapper mx-auto">
         <div className="w-full md:w-1/2 flex items-center justify-center p-6 md:p-8 bg-opacity-75">
           <div className="text-center space-y-4">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-300 md:text-gray-400">Contact Us</h2>
-            <p className="text-base md:text-lg text-gray-200 md:text-gray-100">
-              If you have any questions or need further assistance, feel free to reach out to us.
+            <h2 className="text-2xl md:text-3xl font-bold text-white">
+              Contact Us
+            </h2>
+            <p className="text-base md:text-lg text-white ">
+              If you have any questions or need further assistance, feel free to
+              reach out to us.
             </p>
           </div>
         </div>
@@ -45,7 +50,12 @@ export default function Contact() {
             <form className="space-y-6" onSubmit={onSubmit}>
               <div className="space-y-4">
                 <div>
-                  <label htmlFor="name" className="block text-gray-700 font-semibold mb-2">Name</label>
+                  <label
+                    htmlFor="name"
+                    className="block text-gray-700 font-semibold mb-2"
+                  >
+                    Name
+                  </label>
                   <input
                     id="name"
                     name="name"
@@ -57,7 +67,12 @@ export default function Contact() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-gray-700 font-semibold mb-2">Email</label>
+                  <label
+                    htmlFor="email"
+                    className="block text-gray-700 font-semibold mb-2"
+                  >
+                    Email
+                  </label>
                   <input
                     id="email"
                     name="email"
@@ -69,7 +84,12 @@ export default function Contact() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="message" className="block text-gray-700 font-semibold mb-2">Message</label>
+                  <label
+                    htmlFor="message"
+                    className="block text-gray-700 font-semibold mb-2"
+                  >
+                    Message
+                  </label>
                   <textarea
                     id="message"
                     name="message"
@@ -91,11 +111,21 @@ export default function Contact() {
             </form>
 
             {result && (
-              <div className="text-center text-gray-500 mt-4" style={{width:'80%', background:'#4C9A2A', border: '1.5px solid green', borderRadius:'10px', marginLeft:'9%'}}>
-                <span style={{color:'white', fontSize:'0.8rem'}}>{result}</span>
+              <div
+                className="text-center text-gray-500 mt-4"
+                style={{
+                  width: '80%',
+                  background: '#4C9A2A',
+                  border: '1.5px solid green',
+                  borderRadius: '10px',
+                  marginLeft: '9%',
+                }}
+              >
+                <span style={{ color: 'white', fontSize: '0.8rem' }}>
+                  {result}
+                </span>
               </div>
             )}
-
           </div>
         </div>
       </div>
