@@ -5,10 +5,10 @@ import { MenuIcon, XIcon, ChevronRightIcon } from '@heroicons/react/solid';
 
 const navigation = [
   { name: 'Home', href: '/', subItems: [] },
-  { name: 'About us', href: '/story', subItems: [] },
-  { name: 'Sectors We Serve', href: '/test', subItems: [] },
-  { name: 'Tax Services', href: '/tax', subItems: [] },
-  { name: 'Accounting Services', href: '/Train', subItems: [] },
+  { name: 'About us', href: '/about-us', subItems: [] },
+  { name: 'Sectors We Serve', href: '/sectors-we-serve', subItems: [] },
+  { name: 'Tax Services', href: '/tax-services', subItems: [] },
+  { name: 'Accounting Services', href: '/accounting-services', subItems: [] },
   { name: 'Contact us', href: '/contact', subItems: [] }
 ];
 

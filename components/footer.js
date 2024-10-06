@@ -7,9 +7,9 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 
 const footerLinks = [
-  { name: 'Business Services', href: '/test' },
-  { name: 'Tax Services', href: '/tax' },
-  { name: 'Accounting Services', href: '/Train' },
+  { name: 'Business Services', href: '/sectors-we-serve' },
+  { name: 'Tax Services', href: '/tax-services' },
+  { name: 'Accounting Services', href: '/accounting-services' },
   { name: 'Contact Us', href: '/contact' },
 ];
 

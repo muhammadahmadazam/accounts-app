@@ -1,82 +1,50 @@
-import React, { useState } from 'react';
-import { useRouter } from 'next/router';
+import Image from 'next/image'
+import { motion } from 'framer-motion'
 
-// Import any necessary styles for the image if required
-
-const LogoComponent = () => {
-  const router = useRouter();
-
-  const handleClick = () => {
-    router.push('/story');
-  };
-
+export default function AboutSection() {
   return (
-    <div className="bg-white pt-16">
-      <div className="flex flex-col xl:flex-row   mx-auto max-w-wrapper">
-        {/* Left Side: Content Section */}
-        <div className="flex flex-col justify-center items-center bg-white xl:w-1/2 p-4 order-[2] xl:order-[0]">
-          <div className="text-center p-4">
-            {/* <h2 className="text-3xl font-bold mb-4">A family firm.</h2> */}
-            <p className="text-gray-700 ">
-              With a presence in multiple cities across the UK, our accounting
-              firm is led by Farhan Butt, a Certified Chartered Accountant with
-              extensive experience from the Big 4 accounting firms and US
-              Fortune 500 companies. With a diverse background across different
-              sectors, he ensures that at Wise Numbers top-tier expertise and
-              strategic financial guidance is provided to all our clients. Our
-              team comprises experienced bookkeepers, accountants, tax experts,
-              financial advisors, and support professionals, ensuring we deliver
-              excellent customer support and efficient, timely solutions for all
-              your accounting and tax needs.
+    <div className="bg-[#E5E7EB] py-16 px-4">
+      <div className="max-w-7xl mx-auto">
+        <motion.div 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          className="flex flex-col lg:flex-row items-start gap-12"
+        >
+          <div className="lg:w-1/2 space-y-6">
+            <h2 className="text-3xl font-bold text-[#242A33] mb-4">About Wise Numbers LTD</h2>
+            <p className="text-[#242A33] leading-relaxed">
+              With a presence in multiple cities across the UK, our accounting firm is led by Farhan Butt, a Certified Chartered Accountant with extensive experience from the Big 4 accounting firms and US Fortune 500 companies. At Wise Numbers, we provide top-tier expertise and strategic financial guidance to all our clients.
             </p>
-
-            <p className="text-gray-700">
-              We have successfully worked with a wide range of clients, from
-              individuals and small businesses to large organizations. Our
-              clients are based across the UK and overseas. Examples of our
-              clients include individual contractors, freelancers, and
-              healthcare professionals; small businesses such as retailers,
-              training and writing services; and large organizations like car
-              dealerships and import/export companies. Our firm prides itself on
-              delivering tailored, client-centric solutions that ensure your
-              financial success and peace of mind. At Wise Numbers LTD, we offer
-              a full spectrum of accounting and tax services: bookkeeping,
-              year-end accounts, management accounts, rental income accounts,
-              payroll, pension scheme management, self-assessment, personal tax
-              planning, VAT preparation, corporation tax, capital gains tax,
-              inheritance tax, and company secretarial services. We also provide
-              strategic decision-making support to businesses, where we provide
-              forecast, budgets, cashflow projections, profitability, KPIs and
-              business performance reports. We also provide comprehensive audit
-              services to the clients where needed. Our niche services, such as
-              strategic management support, financial consultancy, and advanced
-              tax planning, truly set us apart from other accounting firms.
+            <p className="text-[#242A33] leading-relaxed">
+              Our team comprises experienced bookkeepers, accountants, tax experts, financial advisors, and support professionals, ensuring excellent customer support and efficient, timely solutions for all your accounting and tax needs.
             </p>
-
-            <p className="text-gray-700">
-              Contact us today to discover how our expertise and personalized
-              approach can support your financial goals. Let Wise Numbers LTD be
-              your trusted partner in achieving financial excellence.
+            <h3 className="text-2xl font-semibold text-[#242A33] mt-8 mb-4">Our Clients</h3>
+            <p className="text-[#242A33] leading-relaxed">
+              We have successfully worked with a wide range of clients across the UK and overseas, including:
             </p>
-            {/* <button className="bg-[#3b445f] text-white py-2 px-6 rounded-lg hover:bg-blue-600 transition duration-300" onClick={handleClick}>
-            Our Story
-          </button> */}
+            <ul className="list-disc list-inside text-[#242A33] space-y-2 ml-4">
+              <li>Individual contractors, freelancers, and healthcare professionals</li>
+              <li>Small businesses such as retailers, training and writing services</li>
+              <li>Large organizations like car dealerships and import/export companies</li>
+            </ul>
           </div>
-        </div>
-
-        {/* Right Side: Image Section */}
-        <div className="w-full xl:w-1/2 p-4 flex justify-center items-center h-full order-1 xl:order-[0]">
-          {' '}
-          {/* Added mt-16 for spacing */}
-          <img
-            src="/about.png" // Replace with the actual path to your image
-            alt="Services Across the UK"
-            className="h-auto object-cover rounded-lg lg:max-w-[500px] sm:max-w-[451px] max-w-[300px]"
-          />
-        </div>
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.2, duration: 0.8 }}
+            className="lg:w-1/2 flex justify-center items-start"
+          >
+            <Image
+              src="/about.png"
+              alt="Premier Chartered Accounting Firm"
+              width={500}
+              height={500}
+              className="rounded-lg shadow-lg"
+            />
+          </motion.div>
+        </motion.div>
       </div>
     </div>
-  );
-};
-
-export default LogoComponent;
+  )
+}

@@ -1,37 +1,63 @@
-import React from 'react';
-// import './ContentPictureComponent.css'; // Uncomment if you have a CSS file
+"use client"
 
-const ContentPictureComponent = () => {
+import { motion } from "framer-motion"
+
+export default function HeroSection() {
   return (
-    <div className="flex flex-col lg:flex-row lg:gap-8 items-center lg:items-center p-4 lg:p-0 lg:h-screen px-[1.5rem] mx-auto max-w-[1450px]">
-      {/* Content Section */}
-      <div className="lg:w-1/2 p-4 mt-24 flex flex-col justify-center text-center lg:mt-0 lg:p-0">
-        <h1 className="font-montserrat mb-4 font-bold text-gray-700 text-2xl mt-4 sm:text-4xl lg:mt-16 ">
-          Wise Numbers LTD
-        </h1>
-        <p className="text-base lg:text-lg text-gray-700 mt-4 md:mt-12">
-          Wise Numbers LTD, is an Expert-Led Accounting Firm, with extensive
-          experience in the UK. The firm provides tailored financial services to
-          varying client needs. Supported by a skilled team of bookkeepers,
-          accountants, and tax experts, Wise Numbers caters to a diverse
-          clientele, from freelancers to large organizations. Their services
-          include strategic financial consultancy and advanced tax planning,
-          making them a trusted partner for achieving financial success and
-          peace of mind.
-        </p>
-      </div>
-
-      {/* Picture Section */}
-      <div className="lg:w-1/2 p-4 mt-8 sm:mt-16 lg:mt-0 lg:p-0 flex justify-center">
-        <img
-          src="/heroSection.png"
-          alt="Hero section Image"
-          className="rounded-lg w-full  max-w-[320px] sm:max-w-[451px] "
-          style={{ height: 'auto' }} // Ensure height is auto to maintain aspect ratio
-        />
+    <div className="flex items-center justify-center min-h-screen bg-[#E5E7EB] px-4 py-16 md:py-8">
+      <div className="flex flex-col lg:flex-row lg:items-center max-w-7xl w-full">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="lg:w-1/2 lg:pr-12 mb-8 lg:mb-0"
+        >
+          <motion.h1 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2, duration: 0.8 }}
+            className="font-montserrat text-2xl sm:text-3xl lg:text-5xl font-bold mb-4 text-[#242A33]"
+          >
+            Wise Numbers LTD
+          </motion.h1>
+          <motion.p 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.4, duration: 0.8 }}
+            className="font-montserrat text-base sm:text-lg lg:text-xl text-[#242A33] mb-4"
+          >
+            Expert-Led Accounting Firm with Extensive UK Experience
+          </motion.p>
+          <motion.p 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.6, duration: 0.8 }}
+            className="font-montserrat text-sm sm:text-base lg:text-lg text-[#242A33] mb-6"
+          >
+            Wise Numbers LTD provides tailored financial services to meet varying client needs. Our skilled team of bookkeepers, accountants, and tax experts caters to a diverse clientele, from freelancers to large organizations. We offer strategic financial consultancy and advanced tax planning, making us your trusted partner for achieving financial success and peace of mind.
+          </motion.p>
+          <motion.button
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8, duration: 0.5 }}
+            className="bg-[#242A33] hover:bg-opacity-90 text-white font-bold py-2 sm:py-3 px-4 sm:px-6 rounded-md transition duration-300 ease-in-out transform hover:scale-105"
+          >
+            Learn More
+          </motion.button>
+        </motion.div>
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.4, duration: 0.8 }}
+          className="lg:w-1/2 flex justify-center"
+        >
+          <img
+            src="/heroSection.png"
+            alt="Financial data visualization"
+            className="rounded-lg w-full max-w-[280px] sm:max-w-[320px] md:max-w-[451px]"
+          />
+        </motion.div>
       </div>
     </div>
-  );
-};
-
-export default ContentPictureComponent;
+  )
+}

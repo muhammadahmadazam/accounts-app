@@ -27,7 +27,7 @@ const ServiceComponent = () => {
   });
 
   const handleClick = () => {
-    router.push('/test');
+    router.push('/sectors-we-serve');
   };
 
   const openModal = (name, description) => {
