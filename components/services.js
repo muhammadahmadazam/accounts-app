@@ -4,9 +4,11 @@ import { useRouter } from 'next/router';
 const cards = [
   {
     logo: '/image1.jpg', // Replace with your logo image path
-    name: 'Business Services',
+    name: 'Accounting Services',
+    // description:
+    //   ' Expertly navigate complex tax regulations to optimize your business tax strategy, ensuring compliance while uncovering savings opportunities.',
     description:
-      ' Expertly navigate complex tax regulations to optimize your business tax strategy, ensuring compliance while uncovering savings opportunities.',
+      'Efficient accounting services tailored to streamline your financial management. We simplify accounting, boost profits, and ensure smooth compliance, so you can focus on what matters most!',
   },
   {
     logo: '/image.jpg', // Replace with your logo image path

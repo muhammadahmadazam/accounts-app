@@ -24,7 +24,7 @@ const AboutUsComponent = () => {
             Why Choose Us?
           </h2>
           <p className="text-lg mb-8">
-            Here at HHM Accountants, our skilled Accountants, Tax Consultants,
+            Here at Wise Numbers Ltd, our skilled Accountants, Tax Consultants,
             and Business Advisors are here to help small and medium-sized
             businesses. Our team comprises extensively qualified Chartered
             Accountants and renowned industry business consultants.
