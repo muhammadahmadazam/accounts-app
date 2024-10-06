@@ -7,8 +7,8 @@ const navigation = [
   { name: 'Home', href: '/', subItems: [] },
   { name: 'About us', href: '/story', subItems: [] },
   { name: 'Sectors We Serve', href: '/test', subItems: [] },
-  { name: 'Tax Services', href: '/tax', subItems: ['Advisory', 'Compliance', 'Planning'] },
-  { name: 'Accounting Services', href: '/Train', subItems: ['Bookkeeping', 'Year End Accounts ', 'More'] },
+  { name: 'Tax Services', href: '/tax', subItems: [] },
+  { name: 'Accounting Services', href: '/Train', subItems: [] },
   { name: 'Contact us', href: '/contact', subItems: [] }
 ];
 
