@@ -1,6 +1,24 @@
 import React from 'react';
-
+import ContentBox from './ContentBox';
 const LogoComponent = () => {
+  const services = [
+    { title: "Healthcare", text: "Medical practices, GPs, dentists, supported living, and care homes." },
+    { title: "Construction", text: "Contractors, builders, and construction management firms." },
+    { title: "Real Estate", text: "Property management, real estate agencies, and developers." },
+    { title: "Retail", text: "Shops, e-commerce businesses on Shopify, Amazon, and TikTok." },
+    { title: "Hospitality", text: "Hotels, restaurants, and event venues." },
+    { title: "Car Dealerships", text: "Car garages, mechanics, paint, and spare parts shops." },
+    { title: "Financial Services", text: "Mortgage brokers, insurance and investment firms, and financial advisors." },
+    { title: "Professional Services", text: "Legal firms, consulting agencies, and marketing companies." },
+    { title: "Education", text: "Schools, colleges, universities, and educational institutions." },
+    { title: "Technology", text: "IT firms, software companies, and tech startups." },
+    { title: "Non-Profit Organizations", text: "Charities, foundations, and community organizations." },
+    { title: "Transport and Logistics", text: "Shipping companies, freight carriers, and logistics providers." },
+    { title: "Entertainment and Media", text: "Film production, music, publishing, and media companies." },
+    { title: "Agriculture", text: "Farms, agricultural businesses, and agribusinesses." },
+    { title: "Energy and Utilities", text: "Oil, gas, renewable energy, and utility companies." },
+    { title: "Self Employeed individuals", text: "Chauffeurs, Cleaning Businesses, Home Food Catering, Hairdressers and Nail Salons" },
+  ];
   return (
     <div className="min-h-screen flex flex-col md:flex-row bg-white pb-24">
       {/* Left Side: Content Section */}
@@ -15,31 +33,14 @@ const LogoComponent = () => {
           <p className="mb-4">
             Our Service Sectors include but are not limited to:
           </p>
-          <ul className="list-disc list-inside text-gray-700 space-y-2">
-            <li><strong>Healthcare:</strong> Medical practices, GPs, dentists, supported living, and care homes.</li>
-            <li><strong>Construction:</strong> Contractors, builders, and construction management firms.</li>
-            <li><strong>Real Estate:</strong> Property management, real estate agencies, and developers.</li>
-            <li><strong>Retail:</strong> Shops, e-commerce businesses on Shopify, Amazon, and TikTok.</li>
-            <li><strong>Hospitality:</strong> Hotels, restaurants, and event venues.</li>
-            <li><strong>Car Dealerships:</strong> Car garages, mechanics, paint, and spare parts shops.</li>
-            <li><strong>Financial Services:</strong> Mortgage brokers, insurance and investment firms, and financial advisors.</li>
-            <li><strong>Professional Services:</strong> Legal firms, consulting agencies, and marketing companies.</li>
-            <li><strong>Education:</strong> Schools, colleges, universities, and educational institutions.</li>
-            <li><strong>Technology:</strong> IT firms, software companies, and tech startups.</li>
-            <li><strong>Non-Profit Organizations:</strong> Charities, foundations, and community organizations.</li>
-            <li><strong>Transport and Logistics:</strong> Shipping companies, freight carriers, and logistics providers.</li>
-            <li><strong>Entertainment and Media:</strong> Film production, music, publishing, and media companies.</li>
-            <li><strong>Agriculture:</strong> Farms, agricultural businesses, and agribusinesses.</li>
-            <li><strong>Energy and Utilities:</strong> Oil, gas, renewable energy, and utility companies.</li>
-            <li><strong>Self-Employed Individuals:</strong>
-              <ul className="list-disc list-inside pl-5 space-y-2">
-                <li>Chauffeurs – Handling income and expense management.</li>
-                <li>Cleaning Businesses – Managing bookkeeping and tax filings.</li>
-                <li>Home Food Catering – Financial planning and tax services for caterers.</li>
-                <li>Hairdressers and Nail Salons – Personal and business tax assistance, and financial management.</li>
-              </ul>
-            </li>
-          </ul>
+          <div className='flex flex-col justify-center items-center '>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mx-auto">
+              {services.map((service, index) => (
+                <ContentBox key={index} title={service.title} text={service.text}/>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </div>
