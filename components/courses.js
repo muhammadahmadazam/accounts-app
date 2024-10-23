@@ -68,7 +68,7 @@ export default function ServicesGrid() {
         </div>
         <div className="mt-12 text-center">
           <a
-            href="/services"
+            href="/tax-services"
             className="inline-block bg-[#242A33] text-white py-3 px-6 rounded-md hover:bg-opacity-90 transition duration-300"
           >
             View All Services

@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
+import Link from 'next/link';
 
 export default function HeroSection() {
   return (
@@ -42,7 +43,9 @@ export default function HeroSection() {
             transition={{ delay: 0.8, duration: 0.5 }}
             className="bg-[#242A33] hover:bg-opacity-90 text-white font-bold py-2 sm:py-3 px-4 sm:px-6 rounded-md transition duration-300 ease-in-out transform hover:scale-105"
           >
+            <Link href='/about-us'>
             Learn More
+            </Link>
           </motion.button>
         </motion.div>
         <motion.div 
